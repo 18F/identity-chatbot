@@ -1,0 +1,52 @@
+{
+  "name": "auxsite",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.28",
+    "@fortawesome/free-solid-svg-icons": "^5.13.0",
+    "@fortawesome/react-fontawesome": "^0.1.9",
+    "autolinker": "^3.13.0",
+    "aws-sdk": "^2.650.0",
+    "bootstrap": "^4.4.1",
+    "i": "^0.3.6",
+    "prop-types": "^15.5.10",
+    "react": "^16.13.1",
+    "react-bootstrap": "^1.0.0",
+    "react-dom": "^16.13.1",
+    "react-scripts": "^3.4.1",
+    "recorder-js": "^1.0.7",
+    "rimraf": "^3.0.2"
+  },
+  "scripts": {
+    "clean": "rimraf build",
+    "build": "react-scripts build",
+    "start": "react-scripts start",
+    "serve": "browser-sync start --server --files \"dist/css/*.css, dist/js/*.js, **/*.html, !node_modules/**/*.html\""
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^3.4.2",
+    "file-loader": "^4.3.0",
+    "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^1.1.3"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

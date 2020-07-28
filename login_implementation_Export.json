@@ -1,0 +1,1844 @@
+{
+  "metadata": {
+    "schemaVersion": "1.0",
+    "importType": "LEX",
+    "importFormat": "JSON"
+  },
+  "resource": {
+    "name": "login_implementation",
+    "version": "2",
+    "intents": [
+      {
+        "name": "why_personal_key_invalid",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "Why is my personal key invalid",
+          "My personal key is not working",
+          "It says that my personal key is invalid"
+        ],
+        "slots": [],
+        "conclusionStatement": {
+          "messages": [
+            {
+              "groupNumber": 1,
+              "contentType": "PlainText",
+              "content": "You have either typed it incorrectly or you have already used it to sign in and it is no longer valid."
+            },
+            {
+              "groupNumber": 2,
+              "contentType": "PlainText",
+              "content": "If you used your personal key to sign in, you were given a new one. Use the latest one to sign in."
+            }
+          ]
+        }
+      },
+      {
+        "name": "why_security_code_invalid",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "My security code is wrong.",
+          "My security code is bad.",
+          "My security code is broken.",
+          "My security code doesn't work.",
+          "My security code is invalid.",
+          "Why does it say that my security code is invalid",
+          "Inclalid security code.",
+          "Why is my security code invalid",
+          "The security code is incorrect.",
+          "why does my security code not work"
+        ],
+        "slots": [],
+        "conclusionStatement": {
+          "messages": [
+            {
+              "groupNumber": 1,
+              "contentType": "PlainText",
+              "content": "  It likely expired.  Request a new security code and make sure you use the most recent one."
+            }
+          ]
+        }
+      },
+      {
+        "name": "hi",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "hi",
+          "hello",
+          "good morning",
+          "good afternoon",
+          "good night",
+          "how are you",
+          "howdy",
+          "hihi",
+          "What can you do",
+          "Who are you",
+          "What do you do",
+          "Are you a real person",
+          "help me",
+          "help",
+          "what color is the sky",
+          "can you help me",
+          "why is the sky blue"
+        ],
+        "slots": [],
+        "conclusionStatement": {
+          "messages": [
+            {
+              "groupNumber": 1,
+              "contentType": "PlainText",
+              "content": "Hi! Consider me a guide to your questions for login.gov. Do you have questions on signing in or changing your settings?"
+            },
+            {
+              "groupNumber": 2,
+              "contentType": "PlainText",
+              "content": "How can I help?"
+            }
+          ]
+        }
+      },
+      {
+        "name": "how_i_change_phone_number",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "How do I change the phone number I use to sign in",
+          "I want to change my phone number. How do I change my phone number",
+          "How do I update my phone number",
+          "I want to update the phone number on file.",
+          "I want to update the phone number in my account",
+          "I have a new phone.",
+          "I have a new phone. I want to update my phone number"
+        ],
+        "slots": [],
+        "conclusionStatement": {
+          "messages": [
+            {
+              "groupNumber": 1,
+              "contentType": "PlainText",
+              "content": "Select MANAGE ACCOUNT on the top right corner to sign into your account."
+            },
+            {
+              "groupNumber": 2,
+              "contentType": "PlainText",
+              "content": "Select EDIT next to your current phone number."
+            },
+            {
+              "groupNumber": 3,
+              "contentType": "PlainText",
+              "content": "Enter your new phone number and select CONFIRM CHANGE. You will receive a new security code on your new phone number."
+            }
+          ]
+        }
+      },
+      {
+        "name": "how_i_sign_i_dont",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "I don't have my phone nor the personal key.",
+          "I forgot both my phone and my personal key",
+          "How do I sign in if I don't have my phone or my personal key"
+        ],
+        "slots": [],
+        "conclusionStatement": {
+          "messages": [
+            {
+              "groupNumber": 1,
+              "contentType": "PlainText",
+              "content": "  You will need to  reset your accout by deleting it."
+            },
+            {
+              "groupNumber": 2,
+              "contentType": "PlainText",
+              "content": "https://www.login.gov/help/signing-in/how-do-i-sign-in-if-i-dont-have-my-phone-or-my-phone-number-has-changed/"
+            }
+          ]
+        }
+      },
+      {
+        "name": "why_didnt_i_receive_security",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "why didn't I receive I security code to confirm my phone",
+          "no security code",
+          "I didn't receive any security code",
+          "I didn't receive any text",
+          "I haven't received a security code",
+          "No text confirmation",
+          "No phone confirmation",
+          "I didn't get any phone call",
+          "No call to confirm",
+          "I didn't get any texts from login.gov",
+          "I didn't get any SMS",
+          "I haven't gotten any texts",
+          "I haven't received any SMS",
+          "There is no text",
+          "No one sent me any texts.",
+          "No one texted me.",
+          "I haven't gotten a text with a confirmation code.",
+          "I did not receive a text",
+          "i did not get a text"
+        ],
+        "slots": [],
+        "conclusionStatement": {
+          "messages": [
+            {
+              "groupNumber": 1,
+              "contentType": "PlainText",
+              "content": "Please check whether you entered your phone number correctly."
+            }
+          ]
+        }
+      },
+      {
+        "name": "i_forgot_email_address_i",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "I forgot which email address I used to create an account",
+          "I forgot the email address. How do I find out which email address I used",
+          "Do you know my email address"
+        ],
+        "slots": [],
+        "conclusionStatement": {
+          "messages": [
+            {
+              "groupNumber": 1,
+              "contentType": "PlainText",
+              "content": "Try to sign in as usual and ask to have your password reset. Then, enter the email address you believe you used to create your account. If we have your email address in our records, we will send instructions on how to reset your password"
+            }
+          ]
+        }
+      },
+      {
+        "name": "how_i_change_password",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "How do I change my password",
+          "Change password",
+          "Change my password"
+        ],
+        "slots": [],
+        "conclusionStatement": {
+          "messages": [
+            {
+              "groupNumber": 1,
+              "contentType": "PlainText",
+              "content": "Select MANAGE ACCOUNT on the top right corner."
+            },
+            {
+              "groupNumber": 2,
+              "contentType": "PlainText",
+              "content": "Select EDIT next to password, enter the new password and submit your change."
+            }
+          ]
+        }
+      },
+      {
+        "name": "my_reset_password_link_invalid",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "My reset link is invalid",
+          "The reset password link is not working",
+          "My reset password link is invalid"
+        ],
+        "slots": [],
+        "conclusionStatement": {
+          "messages": [
+            {
+              "groupNumber": 1,
+              "contentType": "PlainText",
+              "content": "The reset password link might expired. Select RESEND to get a new reset password link"
+            },
+            {
+              "groupNumber": 2,
+              "contentType": "PlainText",
+              "content": "You can also try copying and pasting the confirmation link to the browser. Remove unusual symbols."
+            },
+            {
+              "groupNumber": 3,
+              "contentType": "PlainText",
+              "content": "If you still have issues, send an email to hello@login.gov"
+            }
+          ]
+        }
+      },
+      {
+        "name": "why_cant_i_sign_samgov",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "Why cant I sign into SAM.gov with my username and password",
+          "My username and password in SAM.gov are not working",
+          "Why can't I use my SAM login",
+          "Why can't I use username and password from SAM"
+        ],
+        "slots": [],
+        "conclusionStatement": {
+          "messages": [
+            {
+              "groupNumber": 1,
+              "contentType": "PlainText",
+              "content": "ou must have a login.gov account to sign into SAM.gov. If you dont have a login.gov account, you need to create one."
+            }
+          ]
+        }
+      },
+      {
+        "name": "why_i_need_confirm_email",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "Why do I need to confirm my email address",
+          "Why do I need to confirm my phone",
+          "Why do I need to confirm my phone numbers",
+          "Why do we need to confirm",
+          "Why do you use my phone number for",
+          "why do you need my email",
+          "why do I need to confirm the email and the phone number",
+          "why do I need to confirm my email address and my phone number"
+        ],
+        "slots": [],
+        "conclusionStatement": {
+          "messages": [
+            {
+              "groupNumber": 1,
+              "contentType": "PlainText",
+              "content": "  You confirm your  email address and phone number to receive important security messages about  account activitiy."
+            }
+          ]
+        }
+      },
+      {
+        "name": "what_i_dont_see_usajobs",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "What if I dont see my USAJOBS profile information after I create a login.gov account",
+          "I don't see my usajobs profile",
+          "I dont' see my usajobs account",
+          "What if I don't see my usajobs accunt in my login.gov"
+        ],
+        "slots": [],
+        "conclusionStatement": {
+          "messages": [
+            {
+              "groupNumber": 1,
+              "contentType": "PlainText",
+              "content": "Try https://www.usajobs.gov/Help/faq/account/no-profile/"
+            }
+          ]
+        }
+      },
+      {
+        "name": "what_phishing",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "What is phishing",
+          "Can you explain phishing",
+          "Why is phishing bad"
+        ],
+        "slots": [],
+        "conclusionStatement": {
+          "messages": [
+            {
+              "groupNumber": 1,
+              "contentType": "PlainText",
+              "content": "Phishing is when someone tries to trick you into sharing your password or other personal information online."
+            },
+            {
+              "groupNumber": 2,
+              "contentType": "PlainText",
+              "content": "Phishing is typically done through email, ads, or by sites that look similar to sites you already use"
+            }
+          ]
+        }
+      },
+      {
+        "name": "TTP_Trusted_Travelers_Program",
+        "version": "2",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "TTP",
+          "CBP",
+          "Trusted Traverlers program",
+          "I need help with Trusted Travelers program",
+          "I cant log into trusted travelers program"
+        ],
+        "slots": [],
+        "conclusionStatement": {
+          "messages": [
+            {
+              "groupNumber": 1,
+              "contentType": "PlainText",
+              "content": "Your login.gov account and Trusted Traverler's Program (TTP) account information is separate."
+            },
+            {
+              "groupNumber": 2,
+              "contentType": "PlainText",
+              "content": "If you need help with your TTP account, please visit the TTP FAQs https://ttp.dhs.gov/faq"
+            }
+          ]
+        }
+      },
+      {
+        "name": "how_i_create_logingov_account",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "How do I create a login.gov account for my family member",
+          "How do I register my family for login.gov"
+        ],
+        "slots": [],
+        "conclusionStatement": {
+          "messages": [
+            {
+              "groupNumber": 1,
+              "contentType": "PlainText",
+              "content": "Each family member will need a unique email address to create a login.gov account."
+            },
+            {
+              "groupNumber": 2,
+              "contentType": "PlainText",
+              "content": "Trusted Traveler Programs site requires one login.gov account for eachindividual application."
+            }
+          ]
+        }
+      },
+      {
+        "name": "do_i_need_pay_again",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "Do I need to pay again",
+          "Where do I pay",
+          "How much is the fee"
+        ],
+        "slots": [],
+        "conclusionStatement": {
+          "messages": [
+            {
+              "groupNumber": 1,
+              "contentType": "PlainText",
+              "content": "You do not need to pay to use login.gov."
+            },
+            {
+              "groupNumber": 2,
+              "contentType": "PlainText",
+              "content": "login.gov is for account access and sign-in only and does not affect or have any information about your Trusted Traveler Programs application"
+            }
+          ]
+        }
+      },
+      {
+        "name": "how_i_protect_logingov_account",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "How do I protect my login.gov account with a security key",
+          "How does a security key protect my account"
+        ],
+        "slots": [],
+        "conclusionStatement": {
+          "messages": [
+            {
+              "groupNumber": 1,
+              "contentType": "PlainText",
+              "content": "First, you need to have a security key that supports the FIDO standard."
+            },
+            {
+              "groupNumber": 2,
+              "contentType": "PlainText",
+              "content": "Click MANGE ACCOUNT to sign in. Then select ADD HARDWARE SECURITY KEY."
+            },
+            {
+              "groupNumber": 3,
+              "contentType": "PlainText",
+              "content": "You will be prompted to give your security key a nickname, connect it, and press the button to register"
+            }
+          ]
+        }
+      },
+      {
+        "name": "can_help_scheduling_appointment",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "Can you help with scheduling an appointment",
+          "How do I schedule an appointment",
+          "Id like to schedule an appointment",
+          "I want to schedule an appointment",
+          "Can you help me to schedule a tsa pre appointment"
+        ],
+        "slots": [],
+        "conclusionStatement": {
+          "messages": [
+            {
+              "groupNumber": 1,
+              "contentType": "PlainText",
+              "content": "The best way to schedule an appointment is through the Trusted Traveler Programs sitehttps://ttp.cbp.dhs.gov/"
+            },
+            {
+              "groupNumber": 2,
+              "contentType": "PlainText",
+              "content": "login.gov is for account access and sign-in only and does not affect or have any information about your Trusted Traveler Programs application."
+            }
+          ]
+        }
+      },
+      {
+        "name": "what_i_i_no_longer",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "What should I do if I no longer have access to the email I used to create my SAM.gov account"
+        ],
+        "slots": [],
+        "conclusionStatement": {
+          "messages": [
+            {
+              "groupNumber": 1,
+              "contentType": "PlainText",
+              "content": "If you no longer have access to the email you used to create your SAM.gov profile, you will need to create a new SAM.gov profile with your new login.gov account."
+            }
+          ]
+        }
+      },
+      {
+        "name": "what_authentication_app",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "Where do I download the authentication app",
+          "How does the authentication app work",
+          "What's authentication app",
+          "Tell me about authentication apps"
+        ],
+        "slots": [],
+        "conclusionStatement": {
+          "messages": [
+            {
+              "groupNumber": 1,
+              "contentType": "PlainText",
+              "content": "An authentication app generates security codes for signing in to sites that require a high level of security."
+            },
+            {
+              "groupNumber": 2,
+              "contentType": "PlainText",
+              "content": "Check https://www.login.gov/help/signing-in/what-is-an-authentication-app/ for more details"
+            }
+          ]
+        }
+      },
+      {
+        "name": "how_i_relink_sam_profile",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "How do I relink my SAM profile after deleting my login.gov account",
+          "How can I relink my SAM account with my login.gov account"
+        ],
+        "slots": [],
+        "conclusionStatement": {
+          "messages": [
+            {
+              "groupNumber": 1,
+              "contentType": "PlainText",
+              "content": "After you delete your account, go to https://sam.gov/ to create a new account."
+            },
+            {
+              "groupNumber": 2,
+              "contentType": "PlainText",
+              "content": "If you have used the correct email address, your SAM profile will automatically link once youve signed in."
+            }
+          ]
+        }
+      },
+      {
+        "name": "can_i_remove_saved_password",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "Can I remove a saved password or login information from my browser",
+          "How do I remove saved passwords from my browser",
+          "How do I remove saved passwords",
+          "How do I removed saved email"
+        ],
+        "slots": [],
+        "conclusionStatement": {
+          "messages": [
+            {
+              "groupNumber": 1,
+              "contentType": "PlainText",
+              "content": "Yes, you can remove the email saved in your browser. Check the link below"
+            },
+            {
+              "groupNumber": 2,
+              "contentType": "PlainText",
+              "content": "https://www.login.gov/help/privacy-and-security/can-i-remove-a-saved-password-or-login-information-from-my-browser/"
+            }
+          ]
+        }
+      },
+      {
+        "name": "i_dont_know_passid",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "I dont know my PASSID",
+          "What is my PASSID"
+        ],
+        "slots": [],
+        "conclusionStatement": {
+          "messages": [
+            {
+              "groupNumber": 1,
+              "contentType": "PlainText",
+              "content": "If you have trouble with your PASSID or GOES username and password, please contact CBP directly"
+            },
+            {
+              "groupNumber": 2,
+              "contentType": "PlainText",
+              "content": "Check https://help.cbp.gov/app/ask"
+            }
+          ]
+        }
+      },
+      {
+        "name": "i_already_logingov_account_email",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "I already have a login.gov account but the email is not the same as my SAM email",
+          "my emails are different for SAM and login"
+        ],
+        "slots": [],
+        "conclusionStatement": {
+          "messages": [
+            {
+              "groupNumber": 1,
+              "contentType": "PlainText",
+              "content": "Your login.gov email address must be the same as your SAM.gov email address to successfully link your SAM profile to your login.gov account."
+            },
+            {
+              "groupNumber": 2,
+              "contentType": "PlainText",
+              "content": "You can either update your SAM.gov email, or change your login.gov email, or create another login.gov account."
+            }
+          ]
+        }
+      },
+      {
+        "name": "why_didnt_i_receive_reset",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "Why didnt I receive a reset password email from login.gov",
+          "I didn't receive a reset password email",
+          "I didn't get the reset password email",
+          "I didn't get theemail to reset my password"
+        ],
+        "slots": [],
+        "conclusionStatement": {
+          "messages": [
+            {
+              "groupNumber": 1,
+              "contentType": "PlainText",
+              "content": "Check your spam folder"
+            },
+            {
+              "groupNumber": 2,
+              "contentType": "PlainText",
+              "content": "Alternatively, you may have entered a wrong email address. Choose SEND AGAIN to get a new password reset email"
+            }
+          ]
+        }
+      },
+      {
+        "name": "request_new_security_code",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "i did enter my phone number correctly",
+          "my phone number is correct",
+          "I have the right number"
+        ],
+        "slots": [],
+        "conclusionStatement": {
+          "messages": [
+            {
+              "groupNumber": 1,
+              "contentType": "PlainText",
+              "content": "You can request a new security code."
+            },
+            {
+              "groupNumber": 2,
+              "contentType": "PlainText",
+              "content": "You can receive the code by text message or by a phone call."
+            }
+          ]
+        }
+      },
+      {
+        "name": "USAjobs",
+        "version": "2",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "I cant sign into USASTAFFING even though I have login.gov account.",
+          "I am in a loop on USAjobs website",
+          "I can't access USAstaffing",
+          "I receives a four zero three error message on USAjobs",
+          "My USAjobs account doesnt work",
+          "I dont remember the email I used for USAjobs"
+        ],
+        "slots": [],
+        "conclusionStatement": {
+          "messages": [
+            {
+              "groupNumber": 1,
+              "contentType": "PlainText",
+              "content": "You may be able to find answers to your questions at USAjobs FAQ https://www.usajobs.gov/Help/faq/"
+            },
+            {
+              "groupNumber": 2,
+              "contentType": "PlainText",
+              "content": "If you have any questions about linking your account, please contact the USAJOBS helpdesk."
+            }
+          ]
+        }
+      },
+      {
+        "name": "thank_you",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "thank you",
+          "thanks"
+        ],
+        "slots": [],
+        "conclusionStatement": {
+          "messages": [
+            {
+              "groupNumber": 1,
+              "contentType": "PlainText",
+              "content": "You are welcome. Thanks for using the chatbot!"
+            }
+          ]
+        }
+      },
+      {
+        "name": "reset_account",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "How do I reset my account",
+          "I lost access to my two-factor authentication methods",
+          "I lost my backup codes"
+        ],
+        "slots": [],
+        "conclusionStatement": {
+          "messages": [
+            {
+              "groupNumber": 1,
+              "contentType": "PlainText",
+              "content": "You can reset your account by deleting it. Deleting your existing account and creating a new one will allow you to use the same email address and set up new security options."
+            },
+            {
+              "groupNumber": 2,
+              "contentType": "PlainText",
+              "content": "owever, deleting will remove any agency applications (i.e., USAJOBS, Trusted Traveler, etc.) you have linked to your account, and you will need to relink each account."
+            }
+          ]
+        }
+      },
+      {
+        "name": "im_trying_sign_in_doesnt",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "Im trying to sign in but it doesnt work",
+          "Im trying to reset my passwordbut I dont get an email"
+        ],
+        "slots": [],
+        "conclusionStatement": {
+          "messages": [
+            {
+              "groupNumber": 1,
+              "contentType": "PlainText",
+              "content": "Check your spam filter"
+            },
+            {
+              "groupNumber": 2,
+              "contentType": "PlainText",
+              "content": "We might have an incorrect email address on file. If so, you can always create another account with the correct email address."
+            }
+          ]
+        }
+      },
+      {
+        "name": "how_delete_account",
+        "version": "2",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "how do i delete my account",
+          "I want to delete my account",
+          "delete"
+        ],
+        "slots": [],
+        "conclusionStatement": {
+          "messages": [
+            {
+              "groupNumber": 1,
+              "contentType": "PlainText",
+              "content": "If you are able to sign into your account, please Scroll to the bottom of your profile page and click “delete.” Confirm your password and enter your security code. Click continue. You will then see a message that says your account has been deleted."
+            },
+            {
+              "groupNumber": 2,
+              "contentType": "PlainText",
+              "content": "If you are unable to sign into your account, please contact hello@login.gov for instructions on how to delete your account."
+            }
+          ]
+        }
+      },
+      {
+        "name": "do_i_need_set_security",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "Do I need to set up a security key to use login.gov",
+          "Do I need a security key",
+          "Do I have to have a security key for login.gov"
+        ],
+        "slots": [],
+        "conclusionStatement": {
+          "messages": [
+            {
+              "groupNumber": 1,
+              "contentType": "PlainText",
+              "content": "You do not need to use a security key to use login.gov. However, all login.gov accounts must be set up with a two-factor method."
+            },
+            {
+              "groupNumber": 2,
+              "contentType": "PlainText",
+              "content": "You can set up two-factor authentication by phone call, text message, authentication app, or a security key. A security key is the most secure two-factor method."
+            }
+          ]
+        }
+      },
+      {
+        "name": "why_dont_i_see_sam",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "Why dont I see my SAM profile information after I create my login.gov account and sign in",
+          "I don't see my SAM profile",
+          "Where is my SAM profile"
+        ],
+        "slots": [],
+        "conclusionStatement": {
+          "messages": [
+            {
+              "groupNumber": 1,
+              "contentType": "PlainText",
+              "content": "If you are an existing SAM user and dont see your SAM.gov profile after signing in, this means you did not use the same email address you registered with SAM.gov."
+            },
+            {
+              "groupNumber": 2,
+              "contentType": "PlainText",
+              "content": "Select MANAGE ACCOUNT to sign in your login.gov account. Click EDIT next to your current email."
+            },
+            {
+              "groupNumber": 3,
+              "contentType": "PlainText",
+              "content": "Update your email address to match your SAM.gov registered email"
+            }
+          ]
+        }
+      },
+      {
+        "name": "what_status_application",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "What is the status of my tsa application",
+          "Where can I check my tsa pre application",
+          "what is the status of my tsa pre application"
+        ],
+        "slots": [],
+        "conclusionStatement": {
+          "messages": [
+            {
+              "groupNumber": 1,
+              "contentType": "PlainText",
+              "content": "Sign in to https://ttp.cbp.dhs.gov/to find out the status of your application"
+            },
+            {
+              "groupNumber": 2,
+              "contentType": "PlainText",
+              "content": "login.gov is for account access and sign-in only and does not affect or have any information about your Trusted Traveler Programs application"
+            }
+          ]
+        }
+      },
+      {
+        "name": "how_i_relink_trusted_traveler",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "How do I relink my Trusted Traveler profile after deleting my login.gov account",
+          "how do I link my traveler's profile"
+        ],
+        "slots": [],
+        "conclusionStatement": {
+          "messages": [
+            {
+              "groupNumber": 1,
+              "contentType": "PlainText",
+              "content": "Create a new login account."
+            },
+            {
+              "groupNumber": 2,
+              "contentType": "PlainText",
+              "content": "In the account profile page, select YES under HAVE YOU EVER APPLIED FOR GLOBAL ENTRY, NEXUS, or SENTRI?"
+            },
+            {
+              "groupNumber": 3,
+              "contentType": "PlainText",
+              "content": "https://www.login.gov/help/trusted-traveler-programs/relink-my-profile/"
+            }
+          ]
+        }
+      },
+      {
+        "name": "how_i_set_authentication_app",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "How do I set up an authentication app",
+          "I want to set up the authentication app",
+          "How can I set up the authentication app",
+          "How do I set up a security key"
+        ],
+        "slots": [],
+        "conclusionStatement": {
+          "messages": [
+            {
+              "groupNumber": 1,
+              "contentType": "PlainText",
+              "content": "Install an authentication app to your device. Here is how:https://www.login.gov/help/changing-settings/how-do-I-set-up-an-authentication-app/"
+            },
+            {
+              "groupNumber": 2,
+              "contentType": "PlainText",
+              "content": "Click MANAGE ACCOUNT to sign in."
+            },
+            {
+              "groupNumber": 3,
+              "contentType": "PlainText",
+              "content": "Select ENABLE next to Authentication app."
+            }
+          ]
+        }
+      },
+      {
+        "name": "DOT_FMCSA_CDL",
+        "version": "4",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "DOT FMCSA CDL",
+          "Federal Motor Carrier Safety Administration FMCSA Commercial Drivers License Drug and Alcohol Clearinghouse Portal",
+          "I am having trouble logging into the Commercial Drivers License Drug and Alcohol Clearinghouse Portal"
+        ],
+        "slots": [],
+        "conclusionStatement": {
+          "messages": [
+            {
+              "groupNumber": 1,
+              "contentType": "PlainText",
+              "content": "If you are having issues signing into the Department of Transportation's (DOT) Federal Motor Carrier Safety Administration (FMCSA) Commercial Driver’s License Drug and Alcohol Clearinghouse Portal, please make sure you are accessing the correct portal link found here: https://clearinghouse.fmcsa.dot.gov/Register"
+            },
+            {
+              "groupNumber": 2,
+              "contentType": "PlainText",
+              "content": "You can contact FMCSA’s Help desk by going to clearinghouse.fmcsa.dot.gov and click on \"Contact\" or call 1-800-832-5660"
+            }
+          ]
+        }
+      },
+      {
+        "name": "why_sam_using_logingov",
+        "version": "2",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "Why is SAM using login.gov",
+          "Why use login.gov for SAM",
+          "Why not SAM",
+          "Why login SAM",
+          "Why does SAM use login.gov",
+          "Why connect SAM with login.gov",
+          "Why login.gov for SAM",
+          "How does SAM and login.gov relate to each other"
+        ],
+        "slots": [],
+        "conclusionStatement": {
+          "messages": [
+            {
+              "groupNumber": 1,
+              "contentType": "PlainText",
+              "content": "By using login.gov, youll get an extra layer of security to help protect your SAM.gov profile against password compromises."
+            },
+            {
+              "groupNumber": 2,
+              "contentType": "PlainText",
+              "content": "If you are an existing SAM user, use the same email address you registered within SAM.gov so we can automatically link your SAM.gov profile to your login.gov account. If you use a different email address, we wont be able to link your profile automatically."
+            },
+            {
+              "groupNumber": 3,
+              "contentType": "PlainText",
+              "content": "For more questions related to SAM.gov, check https://sam.gov/SAM/pages/public/help/samQUserGuides.jsf"
+            }
+          ]
+        }
+      },
+      {
+        "name": "should_i_use_gov_mil",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "Should I use a gov mil and edu email address",
+          "I don't have a gov email address",
+          "I am in the military",
+          "Should I use my work address",
+          "Which email address should I use"
+        ],
+        "slots": [],
+        "conclusionStatement": {
+          "messages": [
+            {
+              "groupNumber": 1,
+              "contentType": "PlainText",
+              "content": "We recommend you dont use a .gov, .mil or .edu email address, because if you leave your government or military position or school, you wont have access to that email address anymore."
+            }
+          ]
+        }
+      },
+      {
+        "name": "why_didnt_i_receive_confirmation",
+        "version": "2",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "I didn't get an email",
+          "Why didn't I receive a confirmation email from login.gov",
+          "No confirmation email",
+          "I didn't get a confirmation email",
+          "I don't see a confirmation email",
+          "I didn't receive any email from login.gov",
+          "I didn't get any confirmation email",
+          "I did not get an email confirmation",
+          "why didn't I receive a confirmation email from login.gov"
+        ],
+        "slots": [],
+        "conclusionStatement": {
+          "messages": [
+            {
+              "groupNumber": 1,
+              "contentType": "PlainText",
+              "content": "Please check your spam folder for an email from no-reply@login.gov or an email from the @mail.login.gov domain, as our emails are sometimes incorrectly put there. If you add “no-reply@login.gov” to your contact list, your email provider will not send it to spam. Once this is done, please try requesting another email."
+            },
+            {
+              "groupNumber": 2,
+              "contentType": "PlainText",
+              "content": "If you are still not receiving our emails, it is possible that although your email address is valid, it is not recognized by our system. We suggest using a different email address.USAjobs"
+            }
+          ]
+        }
+      },
+      {
+        "name": "what_i_account_already_exists",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "What do i do if an account already exists under my email address",
+          "Account already exists",
+          "Old account",
+          "Someone is using my email",
+          "There is already an email account"
+        ],
+        "slots": [],
+        "conclusionStatement": {
+          "messages": [
+            {
+              "groupNumber": 1,
+              "contentType": "PlainText",
+              "content": "You can reset your password at https://secure.login.gov/users/password/new"
+            },
+            {
+              "groupNumber": 2,
+              "contentType": "PlainText",
+              "content": "  If you are sure you  didn't create the account, contact hello@login.gov"
+            }
+          ]
+        }
+      },
+      {
+        "name": "what_email_address_i_use",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "What email address do I use to create a login.gov account",
+          "What kind of email do I use for usajobs account",
+          "Which email should I use for usajobs"
+        ],
+        "slots": [],
+        "conclusionStatement": {
+          "messages": [
+            {
+              "groupNumber": 1,
+              "contentType": "PlainText",
+              "content": "When you use the same email address, USAJOBS will automatically link your profile to the login.gov account."
+            }
+          ]
+        }
+      },
+      {
+        "name": "what_i_need_order_sign",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "What do I need to have in order to sign in",
+          "How do I use login.gov",
+          "How do I use this site",
+          "How do I use login",
+          "How do I log in",
+          "How do I sign in",
+          "How to sign in"
+        ],
+        "slots": [],
+        "conclusionStatement": {
+          "messages": [
+            {
+              "groupNumber": 1,
+              "contentType": "PlainText",
+              "content": "Every time you log into your account, you will need your email address, your password, and access to your phone."
+            },
+            {
+              "groupNumber": 2,
+              "contentType": "PlainText",
+              "content": "After you have entered your email address and password, login.gov will send to your phone a security code, which you will need to enter into the security code field in order to be logged in securely."
+            }
+          ]
+        }
+      },
+      {
+        "name": "how_i_make_password_strong",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "How do I make my password strong",
+          "What are your password rules",
+          "What kind of passwords do you allow",
+          "What password should I use"
+        ],
+        "slots": [],
+        "conclusionStatement": {
+          "messages": [
+            {
+              "groupNumber": 1,
+              "contentType": "PlainText",
+              "content": "Your password should be at least 8 characters long. Try using multiple words and spaces to create a memorable phrase."
+            },
+            {
+              "groupNumber": 2,
+              "contentType": "PlainText",
+              "content": "Longer passwords with many words are stronger than short passwords with special characters."
+            }
+          ]
+        }
+      },
+      {
+        "name": "why_i_locked_logingov",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "My account is locked",
+          "I am locked out. What can I do",
+          "Why am I locked out of login.gov"
+        ],
+        "slots": [],
+        "conclusionStatement": {
+          "messages": [
+            {
+              "groupNumber": 1,
+              "contentType": "PlainText",
+              "content": "You entered the security code incorrectly three times or you requested too many security codes at once. Please wait for 10 minutes and try again"
+            }
+          ]
+        }
+      },
+      {
+        "name": "what_security_key",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "What is a security key",
+          "what's a security key",
+          "a security key",
+          "can you explain a security key to me",
+          "what is a key",
+          "what is a yubico key",
+          "what is a FIDO security key"
+        ],
+        "slots": [],
+        "conclusionStatement": {
+          "messages": [
+            {
+              "groupNumber": 1,
+              "contentType": "PlainText",
+              "content": "A security key is usually a piece of physical hardware, like a USB, that you can carry on your keychain. You can also use supporting software, such as a web browser extension or other services."
+            },
+            {
+              "groupNumber": 2,
+              "contentType": "PlainText",
+              "content": "When choosing a security key, look for compatibility with the FIDO standard."
+            }
+          ]
+        }
+      },
+      {
+        "name": "how_i_reset_password",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "How do i reset my passwords",
+          "How do get new password",
+          "I want to reset my password",
+          "password reset",
+          "get new password",
+          "new password",
+          "i forgot my password",
+          "I dont remember my password",
+          "I forgot my passwords."
+        ],
+        "slots": [],
+        "conclusionStatement": {
+          "messages": [
+            {
+              "groupNumber": 1,
+              "contentType": "PlainText",
+              "content": "Click FORGOT YOUR PASSWORD in the login page"
+            },
+            {
+              "groupNumber": 2,
+              "contentType": "PlainText",
+              "content": "https://secure.login.gov/users/password/new"
+            }
+          ]
+        }
+      },
+      {
+        "name": "if_i_dont_phone_i",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "How do i sign in without a phone",
+          "My phone is not working right now. Can I still sign in",
+          "I can't use my phone right now",
+          "My phone is broken",
+          "I don't have my phone today",
+          "If I don't have my phone with me can I still sign in"
+        ],
+        "slots": [],
+        "conclusionStatement": {
+          "messages": [
+            {
+              "groupNumber": 1,
+              "contentType": "PlainText",
+              "content": "  Yes, if you have your  16-character person key. Select Choose another security option to  enter your person key."
+            },
+            {
+              "groupNumber": 2,
+              "contentType": "PlainText",
+              "content": "  You will be given a  new personal key if you use the current key."
+            }
+          ]
+        }
+      },
+      {
+        "name": "how_i_change_email_address",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "How do I change my email address",
+          "I want to change my email address",
+          "How do I update my email address",
+          "I want to update my email address",
+          "change email",
+          "change my email",
+          "change my email account",
+          "reset my email",
+          "how do i update my email"
+        ],
+        "slots": [],
+        "conclusionStatement": {
+          "messages": [
+            {
+              "groupNumber": 1,
+              "contentType": "PlainText",
+              "content": "Select MANAGE ACCOUNT on the top right corner to sign into your account"
+            },
+            {
+              "groupNumber": 2,
+              "contentType": "PlainText",
+              "content": "Select EDIT next to your current email address."
+            },
+            {
+              "groupNumber": 3,
+              "contentType": "PlainText",
+              "content": "Enter the new email address and submit it."
+            }
+          ]
+        }
+      },
+      {
+        "name": "escape",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "representative",
+          "I want to talk to a real human",
+          "bye",
+          "this is stupid",
+          "close",
+          "abort",
+          "I want to talk to a rep",
+          "What's your phone number",
+          "What is the email of the helpdesk",
+          "How do I talk to a real human being",
+          "rep",
+          "I am done",
+          "I have another question",
+          "You are not helpful",
+          "never mind",
+          "that's not helpful",
+          "Goodbye",
+          "Good bye"
+        ],
+        "slots": [],
+        "conclusionStatement": {
+          "messages": [
+            {
+              "groupNumber": 1,
+              "contentType": "PlainText",
+              "content": "Please contact hello@login.gov if you have other questions"
+            },
+            {
+              "groupNumber": 2,
+              "contentType": "PlainText",
+              "content": "Thanks!"
+            }
+          ]
+        }
+      },
+      {
+        "name": "how_i_create_account_logingov",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "How do I create an account with login.gov",
+          "How do I register with login.gov",
+          "Get a new account",
+          "Register a new account",
+          "Apply for a new account",
+          "How do I register",
+          "how do i sign up",
+          "register",
+          "registration",
+          "sign up"
+        ],
+        "slots": [],
+        "conclusionStatement": {
+          "messages": [
+            {
+              "groupNumber": 1,
+              "contentType": "PlainText",
+              "content": "To create a login.gov account youll need a valid email address and a working phone number."
+            },
+            {
+              "groupNumber": 2,
+              "contentType": "PlainText",
+              "content": "Go to https://secure.login.gov/sign_up/enter_email to sign up"
+            },
+            {
+              "groupNumber": 3,
+              "contentType": "PlainText",
+              "content": "Here is the step by step tutorial https://www.login.gov/help/creating-an-account/how-do-i-create-an-account-with-logingov/"
+            }
+          ]
+        }
+      },
+      {
+        "name": "other_agency_SAM",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [],
+        "slots": []
+      },
+      {
+        "name": "does_using_security_key_mean",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "Does using a security key mean Im completely safe from phishing",
+          "Does security make me safe"
+        ],
+        "slots": [],
+        "conclusionStatement": {
+          "messages": [
+            {
+              "groupNumber": 1,
+              "contentType": "PlainText",
+              "content": "If you have a security key enabled, login.gov will ask you to use it every time you log in. If you are not asked to use a security key during the login process, this could be a warning that you are not at the real login.gov website."
+            },
+            {
+              "groupNumber": 2,
+              "contentType": "PlainText",
+              "content": "To stay safe when using login.gov, expect to use your security key consistently to log in."
+            }
+          ]
+        }
+      },
+      {
+        "name": "when_i_sign_in_shows",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "When I sign in it only shows my login.gov account information and theres no way to get back to the Trusted Traveler Programs site",
+          "I can't see my Trusted Traveler program info.",
+          "I can't access Trusted Traveler Programs"
+        ],
+        "slots": [],
+        "conclusionStatement": {
+          "messages": [
+            {
+              "groupNumber": 1,
+              "contentType": "PlainText",
+              "content": "If you want to access your Trusted Traveler Programs (TTP) account, always start at https://ttp.cbp.dhs.gov/"
+            }
+          ]
+        }
+      },
+      {
+        "name": "i_dont_phone_can_i",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "I don't have a phone",
+          "My phone is not working"
+        ],
+        "slots": [],
+        "conclusionStatement": {
+          "messages": [
+            {
+              "groupNumber": 1,
+              "contentType": "PlainText",
+              "content": "  You can use an  authentication application instead of a phone number for two factor  authentication."
+            }
+          ]
+        }
+      },
+      {
+        "description": "intent description",
+        "name": "what_twofactor_authentication",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "Tell me about two-factor authentication",
+          "Can you explain two factor authentication to me",
+          "two-factor authentication",
+          "two factor authentication",
+          "What does two factor authentication mean",
+          "What is two factor authentication",
+          "What is two factor authentications",
+          "how do I use two factor authenitcation",
+          "wat is two factor authenitcation",
+          "what is two factor",
+          "what is authentication application",
+          "what is two factor authentication"
+        ],
+        "slots": [],
+        "conclusionStatement": {
+          "messages": [
+            {
+              "groupNumber": 1,
+              "contentType": "PlainText",
+              "content": "  It means we ask you to sign into an account via two different methods."
+            },
+            {
+              "groupNumber": 2,
+              "contentType": "PlainText",
+              "content": "  This keeps your account more secure."
+            }
+          ]
+        }
+      },
+      {
+        "name": "what_personal_key",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "What do I do with the personal key",
+          "Can you explain what a personal key is",
+          "a personal key",
+          "what is my personal key"
+        ],
+        "slots": [],
+        "conclusionStatement": {
+          "messages": [
+            {
+              "groupNumber": 1,
+              "contentType": "PlainText",
+              "content": "It's a 16-character code to help you sign in if you can't verify authentication via your phone."
+            },
+            {
+              "groupNumber": 2,
+              "contentType": "PlainText",
+              "content": "  This is the only way  to recover your account, make sure to print it out or take a screenshot."
+            }
+          ]
+        }
+      },
+      {
+        "name": "how_i_get_new_personal",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "How do I get a new personal key",
+          "How can I get a new personal key.",
+          "Can I get a new personal key"
+        ],
+        "slots": [],
+        "conclusionStatement": {
+          "messages": [
+            {
+              "groupNumber": 1,
+              "contentType": "PlainText",
+              "content": "To request a new personal key, select MANAGE ACCOUNT on the top right corner."
+            },
+            {
+              "groupNumber": 2,
+              "contentType": "PlainText",
+              "content": "Once you are in your account page, select GET A NEW KEY."
+            },
+            {
+              "groupNumber": 3,
+              "contentType": "PlainText",
+              "content": "You can only request a new personal key if you are able to sign into your login.gov account"
+            }
+          ]
+        }
+      },
+      {
+        "name": "what_happen_usajobs_profile",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "What will happen to my USAJOBS Profile",
+          "How about my usajobs profile",
+          "What happens to my profile on usajobs",
+          "What will happen to my usa job profile",
+          "What is going to happen to my usa jobs profile",
+          "What about my profile on usajobs",
+          "What about my profile on usa jobs",
+          "what about my profile on usa job",
+          "usajobs profile",
+          "What will happen to my usajobs file",
+          "What happens to my data on usajobs"
+        ],
+        "slots": [],
+        "conclusionStatement": {
+          "messages": [
+            {
+              "groupNumber": 1,
+              "contentType": "PlainText",
+              "content": "Nothing will happen to the information stored in your USAJOBS profile. Youll keep all of your applications, saved searches and saved jobs."
+            },
+            {
+              "groupNumber": 2,
+              "contentType": "PlainText",
+              "content": "Once you set up a login.gov account, well link it back to your USAJOBS profile. The only difference is youll use your login.gov email address, password and security code to sign into USAJOBS."
+            }
+          ]
+        }
+      },
+      {
+        "name": "how_i_change_sam_account",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "How do I change my SAM account settings",
+          "How can I update SAM settings"
+        ],
+        "slots": [],
+        "conclusionStatement": {
+          "messages": [
+            {
+              "groupNumber": 1,
+              "contentType": "PlainText",
+              "content": "Select MANAGE ACCOUNT on the top right corner to sign in your login.gov account."
+            },
+            {
+              "groupNumber": 2,
+              "contentType": "PlainText",
+              "content": "Select My Account Settings from the sub-navigation menu on your My SAM page."
+            },
+            {
+              "groupNumber": 3,
+              "contentType": "PlainText",
+              "content": "Select Edit User Information."
+            }
+          ]
+        }
+      },
+      {
+        "name": "how_i_relink_usajobs_profile",
+        "version": "2",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "How do I relink my USAJOBS profile after deleting my login.gov account",
+          "How can I relink my usajobs account with my login.gov account"
+        ],
+        "slots": [],
+        "conclusionStatement": {
+          "messages": [
+            {
+              "groupNumber": 1,
+              "contentType": "PlainText",
+              "content": "See step by step guidance on how to relink your USAJOBS profile and login.gov account here: https://login.gov/help/usajobs/reset-or-relink-my-logingov-account-for-usajobs/"
+            },
+            {
+              "groupNumber": 2,
+              "contentType": "PlainText",
+              "content": "You can also get help at https://www.usajobs.gov/Help/faq/account/login-gov/"
+            }
+          ]
+        }
+      },
+      {
+        "name": "what_i_need_receive_logingov",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "What do I need to receive the login.gov security code",
+          "How can I get login.gov security code"
+        ],
+        "slots": [],
+        "conclusionStatement": {
+          "messages": [
+            {
+              "groupNumber": 1,
+              "contentType": "PlainText",
+              "content": "You can choose to receive the one time security code via text or phone call if you have a U.S. based cell phone."
+            },
+            {
+              "groupNumber": 2,
+              "contentType": "PlainText",
+              "content": "You can also use an authentication app after you create your account"
+            }
+          ]
+        }
+      },
+      {
+        "name": "why_confirmation_link_invalid",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "Why doesn't the confirmation link work",
+          "confirmation link is invalid",
+          "can't confirm",
+          "I cannot confirm with the link",
+          "The link doesn't work",
+          "Why doesn't it confirm",
+          "The confirmation is brokwn",
+          "The confirmation is not working",
+          "Email confirmation link is not valid",
+          "Why is my confirmation link invalid"
+        ],
+        "slots": [],
+        "conclusionStatement": {
+          "messages": [
+            {
+              "groupNumber": 1,
+              "contentType": "PlainText",
+              "content": "  Your comfirmation  link likely expired. Select &quot;resend&quot; to get a new confirmation  email."
+            },
+            {
+              "groupNumber": 2,
+              "contentType": "PlainText",
+              "content": "  You can also try  copying and pasting the confirmation link to the browser. Remove unusual  symbols."
+            },
+            {
+              "groupNumber": 3,
+              "contentType": "PlainText",
+              "content": "  If you still have  issues, send an email to hello@login.gov"
+            }
+          ]
+        }
+      }
+    ],
+    "voiceId": "Matthew",
+    "childDirected": false,
+    "locale": "en-US",
+    "idleSessionTTLInSeconds": 180,
+    "clarificationPrompt": {
+      "messages": [
+        {
+          "contentType": "PlainText",
+          "content": "Hi, consider me a guide to your questions for login.gov. Do you have questions on signing in or changing your settings? How can I help?"
+        }
+      ],
+      "maxAttempts": 1
+    },
+    "abortStatement": {
+      "messages": [
+        {
+          "contentType": "PlainText",
+          "content": "Sorry that I can't understand you. Please try emailing hello@login.gov to get more help."
+        }
+      ]
+    },
+    "detectSentiment": false
+  }
+}
